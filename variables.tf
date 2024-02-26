@@ -1,5 +1,5 @@
 variable "CustomImageFamilyName" {
-	default = "ixia-breakingpoint-virtual-blade-9-30-121-update2"
+	default = "ixia-breakingpoint-virtual-blade-10-00"
 	description = "Group of images to which image belongs"
 	type = string
 }
@@ -128,7 +128,7 @@ variable "UserProjectTag" {
 }
 
 variable "Version" {
-	default = "9-30-u2"
+	default = "10-00"
 	description = "Versioning of the application using the deployment"
 	type = string
 }
