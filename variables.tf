@@ -1,15 +1,3 @@
-variable "CustomImageFamilyName" {
-	default = "ixia-breakingpoint-virtual-blade-10-00-patch1"
-	description = "Group of images to which image belongs"
-	type = string
-}
-
-variable "CustomImageProjectId" {
-	default = "ixvm-261016"
-	description = "Globally unique identifier for image source project"
-	type = string
-}
-
 variable "Eth0PrivateIpAddress" {
 	default = "10.0.10.11"
 	type = string
@@ -81,6 +69,18 @@ variable "MachineType" {
 	}
 }
 
+variable "MarketplaceImageFamilyName" {
+	default = "ixia-breakingpoint-virtual-blade-11-0-124"
+	description = "Group of images to which image belongs"
+	type = string
+}
+
+variable "MarketplaceImageProjectId" {
+	default = "mpi-keysight-public"
+	description = "Globally unique identifier for image source project"
+	type = string
+}
+
 variable "NetworkTargetTags" {
 	default = [
 		"bps-agent"
@@ -128,7 +128,7 @@ variable "UserProjectTag" {
 }
 
 variable "Version" {
-	default = "10-00-p1"
+	default = "11-00"
 	description = "Versioning of the application using the deployment"
 	type = string
 }
