@@ -23,6 +23,6 @@ data "google_compute_network" "Eth2VpcNetwork" {
 }
 
 data "google_compute_image" "Image" {
-	family = local.MarketplaceImageFamilyName
+	name = local.MarketplaceImageName
 	project = local.MarketplaceImageProjectId
 }

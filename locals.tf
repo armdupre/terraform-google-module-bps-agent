@@ -15,8 +15,8 @@ locals {
 	InstanceId = var.InstanceId
 	InstanceName = "${local.Preamble}-instance"
 	MachineType = var.MachineType
+	MarketplaceImageName = var.MarketplaceImageName
 	MarketplaceImageProjectId = var.MarketplaceImageProjectId
-	MarketplaceImageFamilyName = var.MarketplaceImageFamilyName
 	NetworkTargetTags = var.NetworkTargetTags
 	Preamble = "${local.UserLoginTag}-${local.UserProjectTag}-${local.Tag}-${local.Version}-${local.InstanceId}"
 	RegionName = var.RegionName
