@@ -27,4 +27,5 @@ locals {
 	UserProjectTag = var.UserProjectTag
 	Version = var.Version
 	ZoneName = var.ZoneName
+	init_cli = var.init_cli
 }

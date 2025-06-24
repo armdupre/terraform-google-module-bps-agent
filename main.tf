@@ -40,6 +40,7 @@ resource "google_compute_instance" "Instance" {
 		Owner = local.UserEmailTag
 		Project = local.UserProjectTag
 		serial-port-enable = local.SerialPortEnable
+		user-data = local.init_cli
 	}
 	tags = local.NetworkTargetTags
 	labels = {
