@@ -18,7 +18,7 @@ locals {
 	MarketplaceImageName = var.MarketplaceImageName
 	MarketplaceImageProjectId = var.MarketplaceImageProjectId
 	NetworkTargetTags = var.NetworkTargetTags
-	Preamble = "${local.UserLoginTag}-${local.UserProjectTag}-${local.Tag}-${local.Version}-${local.InstanceId}"
+	Preamble = replace("${local.UserLoginTag}-${local.UserProjectTag}-${local.Tag}-${local.Version}-${local.InstanceId}", "_", "-")
 	RegionName = var.RegionName
 	SerialPortEnable = true
 	Tag = var.Tag
