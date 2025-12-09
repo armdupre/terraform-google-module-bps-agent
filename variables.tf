@@ -70,7 +70,7 @@ variable "MachineType" {
 }
 
 variable "MarketplaceImageName" {
-	default = "ixia-breakingpoint-virtual-blade-11-0-124"
+	default = "ixia-breakingpoint-virtual-blade-11-20-20-19"
 	description = "Identifier for image"
 	type = string
 }
@@ -128,7 +128,7 @@ variable "UserProjectTag" {
 }
 
 variable "Version" {
-	default = "11-00"
+	default = "11-20"
 	description = "Versioning of the application using the deployment"
 	type = string
 }
