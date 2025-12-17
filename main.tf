@@ -41,7 +41,6 @@ resource "google_compute_instance" "Instance" {
 		Project = local.UserProjectTag
 		serial-port-enable = local.SerialPortEnable
 		user-data = local.init_cli
-		user-data-encoding  = "base64"
 	}
 	tags = local.NetworkTargetTags
 	labels = {
