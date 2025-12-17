@@ -41,6 +41,7 @@ resource "google_compute_instance" "Instance" {
 		Project = local.UserProjectTag
 		serial-port-enable = local.SerialPortEnable
 		user-data = local.init_cli
+		user-data-encoding  = "base64"
 	}
 	tags = local.NetworkTargetTags
 	labels = {
@@ -54,4 +55,11 @@ resource "google_compute_address" "Eth0PublicIpAddress" {
 	region = local.RegionName
 	network_tier = "PREMIUM"
 	address_type = "EXTERNAL"
+}
+
+resource "time_sleep" "SleepDelay" {
+	create_duration = local.SleepDelay
+	depends_on = [
+		google_compute_instance.Instance
+	]
 }

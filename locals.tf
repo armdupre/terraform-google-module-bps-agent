@@ -21,11 +21,12 @@ locals {
 	Preamble = replace("${local.UserLoginTag}-${local.UserProjectTag}-${local.Tag}-${local.Version}-${local.InstanceId}", "_", "-")
 	RegionName = var.RegionName
 	SerialPortEnable = true
+	SleepDelay = var.SleepDelay
 	Tag = var.Tag
 	UserEmailTag = var.UserEmailTag
 	UserLoginTag = var.UserLoginTag
 	UserProjectTag = var.UserProjectTag
 	Version = var.Version
 	ZoneName = var.ZoneName
-	init_cli = var.init_cli
+	init_cli = base64gzip(var.init_cli)
 }
